@@ -49,7 +49,7 @@ pipeline {
 
     stage('SonarQube Analysis') {
       steps {
-        withSonarQubeEnv('SonarQubeLocal') {
+        withSonarQubeEnv('sq1') {
           sh """
             mvn sonar:sonar \
               -Dsonar.login=${SONAR_TOKEN}
